@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  padding: 0;
+  background-color: #f0f0f0; /* Warna latar belakang halaman */
+  color: #333; /* Warna teks utama */
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+header,
+footer {
+  background-color: #333; /* Warna header dan footer */
+  color: #fff;
+  text-align: center;
+  padding: 6px;
+  width: 100%;
+}
+
+main {
+  flex: 4;
+  padding: 20px;
+  background-color: #fff; /* Warna latar belakang konten utama */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+aside {
+  flex: 0.5;
+  background-color: #fff; /* Sesuaikan dengan warna aside pada form_style.css */
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  margin-bottom: 10px;
+  background-color: #ddd; /* Warna item menu pada aside */
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 8px;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #007bff; /* Warna saat hover pada item menu */
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+}
+
+.header-content img {
+  width: 50px;
+  margin-right: 10px;
+}
+
+main h2 {
+  color: #333;
+  border-bottom: 2px solid #333;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+section h3 {
+  color: #555;
+  margin-bottom: 10px;
+}
+
+section p {
+  color: #666;
+  line-height: 1.6;
+}
+
+section a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease; /* Efek transisi ketika hover */
+}
+
+section a:hover {
+  color: #0056b3;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  padding: 1px;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  aside {
+    order: -1;
+    margin-bottom: 20px;
+  }
+
+  main {
+    order: 1;
+  }
+}
